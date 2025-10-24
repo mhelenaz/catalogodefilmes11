@@ -116,3 +116,22 @@ alert('Filme não encontrado: "${titulo}".");
 }catch (erro) {
 alert('Erro ao buscar o filme na API.');
 console.error('Erro:', erro);
+}
+
+form.reset();
+}
+
+// Recarregar lista ao abrir a página
+function carregarCatalogo() {
+if (catalogo.length > 0) {
+listaFilmes Container.innerHTML = '';
+catalogo.forEach((filme, i) => renderizarFilme (filme, i));
+}
+}
+
+form.addEventListener('submit', adicionarFilme);
+carregarCatalogo();
+</script>
+
+</body>
+</html>
